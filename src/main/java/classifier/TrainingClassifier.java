@@ -65,6 +65,7 @@ public class TrainingClassifier {
     }
 
     public static void main(String[] args) throws IOException, InterruptedException {
+        String outputpath = args[0];
         final int batchsize = 16;
         final int headingCount = 20;
         final int embeddingSize = 300;
@@ -164,7 +165,7 @@ public class TrainingClassifier {
         EarlyStoppingTrainer trainer = new EarlyStoppingTrainer(esConf,model,trainingIterator);
         trainer.fit();
 
-        model.save(new File("/models/classifier_3_test"), true);
+        model.save(new File(outputpath), true);
         System.out.println("Finished");
     }
 }
