@@ -1,7 +1,7 @@
 # How to Build:
 1. Download and install the latest version of TeXoo (https://github.com/sebastianarnold/TeXoo)
 2. Run `mvn clean install` to install the required dependencies. 
-
+3. Create the PostgreSQL-Database based on the schema in `database/schema.sql`
 
 
 # Generate PubMedSection:
